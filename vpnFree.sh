@@ -78,13 +78,12 @@ then
 	echo "Senha -> "$acessos
 	echo ""
 
-	#echo curl -d signup='1' -d username="${acessos}" -d password="${acessos}" -d password2="${acessos}" -d email='' -d voucher_code='' -d captcha='True' -d unlimited_plan='0' https://prt.windscribe.com/signup
+
 fi
 
 
 if [ $numero -eq 2 ];
-then
-	gnome-terminal  -- ./verificaVpn.sh
+then 
 	while :
 	do
 		windscribe connect
