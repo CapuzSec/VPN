@@ -4,7 +4,7 @@
 
 
 clear
-echo ''' ...Criado por Capuz..
+echo ''' ...Criado por Capuz...
 +---------------------------------------+
 |	  SERVIDOR VPN FREE		|
 |					|
