@@ -4,7 +4,7 @@
 
 
 clear
-echo ''' ...Criado por Eric Rodrigues...
+echo ''' ...Criado por Capuz..
 +---------------------------------------+
 |	  SERVIDOR VPN FREE		|
 |					|
