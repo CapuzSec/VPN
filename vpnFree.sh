@@ -73,9 +73,11 @@ then
 	uAgent=$(cat /dev/urandom | tr -dc '0-9' | fold -w 2 | head -n 1)
 	curl -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/'${uAgent}'.0' -d signup='1' -d username="${acessos}" -d password="${acessos}" -d password2="${acessos}" -d email='' -d voucher_code='' -d captcha='True' -d unlimited_plan='0' https://prt.windscribe.com/signup
 	clear
- 
+
+	windscribe logout
 	echo "Login -> "$acessos
 	echo "Senha -> "$acessos
+	windscribe login
 	echo ""
 
 
@@ -87,6 +89,6 @@ then
 	while :
 	do
 		windscribe connect
-		sleep 15
+		sleep 300
 	done
 fi
