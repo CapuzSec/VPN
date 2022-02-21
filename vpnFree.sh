@@ -43,7 +43,7 @@ then
 	echo "Criando o Usuario e Senha..."
 	acessos=$(cat /dev/urandom | tr -dc 'a-z-0-9' | fold -w 15 | head -n 1)
 	uAgent=$(cat /dev/urandom | tr -dc '0-9' | fold -w 2 | head -n 1)
-	curl -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/'${uAgent}'.0' -d signup='1' -d username="${acessos}" -d password="${acessos}" -d password2="${acessos}" -d email='' -d voucher_code='' -d captcha='True' -d unlimited_plan='0' https://prt.windscribe.com/signup
+	curl -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/'${uAgent}'.0' -d "signup=1&username=${acessos}&password=${acessos}&password2=${acessos}&email=&voucher_code=&captcha=&robert_status=1&unlimited_plan=0" https://prt.windscribe.com/signup
 	clear
  
 	echo "Login -> "$acessos
@@ -71,11 +71,11 @@ then
 	echo "Criando o Usuario e Senha..."
 	acessos=$(cat /dev/urandom | tr -dc 'a-z-0-9' | fold -w 15 | head -n 1)
 	uAgent=$(cat /dev/urandom | tr -dc '0-9' | fold -w 2 | head -n 1)
-	curl -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/'${uAgent}'.0' -d signup='1' -d username="${acessos}" -d password="${acessos}" -d password2="${acessos}" -d email='' -d voucher_code='' -d captcha='True' -d unlimited_plan='0' https://prt.windscribe.com/signup
+	curl -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/'${uAgent}'.0' -d "signup=1&username=${acessos}&password=${acessos}&password2=${acessos}&email=&voucher_code=&captcha=&robert_status=1&unlimited_plan=0" https://prt.windscribe.com/signup
 	clear
 
 	windscribe logout
-	echo "Login -> "$acessos
+	echo "User -> "$acessos
 	echo "Senha -> "$acessos
 	windscribe login
 	echo ""
